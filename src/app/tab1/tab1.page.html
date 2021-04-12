@@ -14,11 +14,17 @@
           <p>{{item.quantity}}</p>
         </ion-item>
         <ion-item-options side="end">
-          <button (click)="removeItem(item,i)">
+          <button (click)="removeItem(item,i)" ion-button>
           <ion-icon name="remove-circle" color="danger"></ion-icon>
         </button>
         <button (click)="addQuantity(item, i)">
           <ion-icon name="add-circle" color="success"></ion-icon>
+        </button>
+        <button (click)="editItem(i)">
+          <ion-icon name="create" color="primary"></ion-icon>
+        </button>
+        <button (click)="deleteItem(i)">
+          <ion-icon name="trash" color="warning"></ion-icon>
         </button>
       </ion-item-options>
     </ion-item-sliding>
